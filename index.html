@@ -7,25 +7,25 @@
 </head>
 <body>
 
-<div class="app">
+<div class="contenedor">
 
   <!-- MENÚ IZQUIERDO -->
-  <aside class="menu">
-    <h2>Menú</h2>
-    <button onclick="mostrarJuegos()">🎮 Juegos</button>
-    <button onclick="mostrarProgramas()">🧩 Programas</button>
+  <aside class="panel menu">
+    <h3>☰ Menú</h3>
+    <ul>
+      <li onclick="mostrarJuegos()">🎮 Juegos</li>
+      <li onclick="mostrarProgramas()">🧩 Programas</li>
+    </ul>
   </aside>
 
   <!-- PANEL PRINCIPAL -->
-  <div class="panel">
+  <main class="panel principal">
 
     <input type="text" class="buscador" placeholder="Buscar...">
 
     <div class="lista">
-      <h3 id="titulo">☰ GamesCrack</h3>
-
+      <h3 id="titulo">☰ Juegos</h3>
       <ul id="lista">
-        <!-- Juegos por defecto -->
         <li onclick="seleccionar('Kenshi')">Kenshi <span class="tag">64 BITS</span></li>
         <li onclick="seleccionar('Left 4 Dead')">Left 4 Dead <span class="tag">LAN</span></li>
         <li onclick="seleccionar('Left 4 Dead 2')">Left 4 Dead 2 <span class="tag">LAN</span></li>
@@ -42,7 +42,7 @@
       </div>
     </div>
 
-  </div>
+  </main>
 
 </div>
 
