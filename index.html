@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>OptiJuegos</title>
+  <title>OptiJuegos Clone</title>
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -14,35 +14,55 @@
 
 <div class="contenedor">
 
-  <!-- LISTA DE JUEGOS -->
+  <!-- SIDEBAR -->
   <aside class="sidebar">
-    <h3>Juegos</h3>
-    <ul id="lista-juegos">
-      <!-- AGREGA JUEGOS AQUÍ MANUALMENTE -->
-      <li onclick="seleccionarJuego('Undertale')">Undertale</li>
-      <li onclick="seleccionarJuego('Plantas VS Zombies')">Plantas VS Zombies</li>
-      <li onclick="seleccionarJuego('Minecraft')">Minecraft</li>
-      <li onclick="seleccionarJuego('Devil May Cry 4')">Devil May Cry 4</li>
-      <li onclick="seleccionarJuego('Cuphead')">Cuphead</li>
+    <h3>Categorías</h3>
+    <ul>
+      <li onclick="filtrar('todos')">📦 Todos</li>
+      <li onclick="filtrar('bajos')">💻 Bajos recursos</li>
+      <li onclick="filtrar('lan')">🌐 LAN</li>
+      <li onclick="filtrar('offline')">🚫 Offline</li>
     </ul>
   </aside>
 
-  <!-- INFO DEL JUEGO -->
-  <main class="contenido">
-    <h2 id="titulo-juego">Selecciona un juego</h2>
+  <!-- LISTA DE JUEGOS -->
+  <main class="juegos">
+    <div id="lista-juegos">
 
-    <div class="info">
-      <p>
-        Aquí aparecerá la información del juego seleccionado.
-        Puedes poner requisitos, descripción, versión optimizada, etc.
-      </p>
-    </div>
+      <!-- JUEGO -->
+      <div class="juego" data-categoria="bajos offline" onclick="seleccionarJuego('Kenshi')">
+        <h4>Kenshi</h4>
+        <span>Bajos recursos</span>
+      </div>
 
-    <div class="acciones">
-      <button>Tutorial</button>
-      <button class="descargar">Descargar</button>
+      <div class="juego" data-categoria="lan bajos" onclick="seleccionarJuego('Left 4 Dead')">
+        <h4>Left 4 Dead</h4>
+        <span>LAN</span>
+      </div>
+
+      <div class="juego" data-categoria="lan bajos" onclick="seleccionarJuego('Left 4 Dead 2')">
+        <h4>Left 4 Dead 2</h4>
+        <span>LAN</span>
+      </div>
+
+      <div class="juego" data-categoria="offline" onclick="seleccionarJuego('Little Nightmares')">
+        <h4>Little Nightmares</h4>
+        <span>Offline</span>
+      </div>
+
+      <!-- AGREGA MÁS JUEGOS AQUÍ -->
+
     </div>
   </main>
+
+  <!-- PANEL INFO -->
+  <aside class="info">
+    <h3 id="titulo-juego">Selecciona un juego</h3>
+    <p id="descripcion">Aquí aparecerá la información del juego.</p>
+
+    <button>📘 Tutorial</button>
+    <button class="descargar">⬇ Descargar</button>
+  </aside>
 
 </div>
 
