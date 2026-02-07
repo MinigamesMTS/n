@@ -5,7 +5,7 @@ const textoJuego = document.getElementById("juego");
 
 let modoActual = "juegos";
 
-/* BUSCADOR (NO BORRA, SOLO OCULTA) */
+/* BUSCADOR */
 buscador.addEventListener("keyup", () => {
   const texto = buscador.value.toLowerCase();
   const items = lista.getElementsByTagName("li");
@@ -16,7 +16,7 @@ buscador.addEventListener("keyup", () => {
   }
 });
 
-/* SELECCIONAR JUEGO / PROGRAMA */
+/* SELECCIONAR JUEGO */
 function seleccionar(nombre) {
   textoJuego.textContent = nombre;
 }
@@ -36,7 +36,7 @@ function mostrarProgramas() {
   mostrarTodo();
 }
 
-/* MOSTRAR TODO AL CAMBIAR DE SECCIÓN */
+/* MOSTRAR TODOS LOS ÍTEMS */
 function mostrarTodo() {
   const items = lista.getElementsByTagName("li");
   for (let item of items) {
