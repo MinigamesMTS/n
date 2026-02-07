@@ -65,12 +65,22 @@
     <p id="descripcion">Aquí aparecerá la información del juego.</p>
 
     <button>📘 Tutorial</button>
-    <button class="descargar">⬇ Descargar</button>
+<button class="descargar" onclick="abrirModal()">Descargar</button>
   </aside>
 
 </div>
 
 <script src="script.js"></script>
 </body>
+<div id="modal" class="modal oculto">
+  <div class="modal-contenido">
+    <h3>Elegir servidor</h3>
+    <button onclick="irLink('mega')">MEGA</button>
+    <button onclick="irLink('mediafire')">MediaFire</button>
+    <button class="cerrar" onclick="cerrarModal()">Cancelar</button>
+  </div>
+</div>
+
 </html>
+
 
