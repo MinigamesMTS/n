@@ -24,6 +24,7 @@ body {
   width: 250px;
   border-radius: 6px;
   border: none;
+  outline: none;
 }
 
 /* CONTENEDOR */
@@ -74,6 +75,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   border: 1px solid #1e293b;
+  transition: background 0.2s;
 }
 
 .juego:hover {
@@ -100,8 +102,74 @@ body {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .info .descargar {
   background: #22c55e;
+  color: #000;
+}
+
+/* ========================= */
+/* MODAL DESCARGA */
+/* ========================= */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-contenido {
+  background: #020617;
+  padding: 25px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  border: 1px solid #1e293b;
+}
+
+.modal-contenido h3 {
+  margin-bottom: 20px;
+}
+
+.modal-contenido button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-contenido button:hover {
+  opacity: 0.85;
+}
+
+.modal-contenido .mega {
+  background: #ef4444;
+  color: white;
+}
+
+.modal-contenido .mediafire {
+  background: #2563eb;
+  color: white;
+}
+
+.modal-contenido .cerrar {
+  background: #334155;
+  color: white;
+}
+
+/* OCULTO */
+.oculto {
+  display: none;
 }
