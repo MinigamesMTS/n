@@ -90,7 +90,7 @@ function irLink(servidor) {
     },
 
 
-  if (links[juegoSeleccionado]) {
+  if (links[JuegoSeleccionado]) {
     window.open(links[juegoSeleccionado][servidor], "_blank");
   } else {
     alert("Link no disponible para este juego");
@@ -98,6 +98,7 @@ function irLink(servidor) {
 
   cerrarModal();
 }
+
 
 
 
