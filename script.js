@@ -22,8 +22,6 @@ function mostrarProgramas() {
     <li onclick="seleccionar('WinRAR')">WinRAR</li>
     <li onclick="seleccionar('7-Zip')">7-Zip</li>
     <li onclick="seleccionar('OBS Studio')">OBS Studio</li>
-    <li onclick="seleccionar('Photoshop')">Photoshop</li>
     <li onclick="seleccionar('VLC Media Player')">VLC Media Player</li>
   `;
 }
-
