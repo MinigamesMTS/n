@@ -28,6 +28,7 @@ body {
   width: 220px;
   padding: 20px;
   border-right: 1px solid rgba(255,255,255,0.1);
+  margin-right: 40px; /* separación del centro */
 }
 
 .menu h3 {
@@ -56,26 +57,26 @@ body {
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* CENTRADO REAL */
 }
 
 /* BUSCADOR */
 .buscador {
-  width: 720px;
+  width: 520px;
   padding: 12px;
   border-radius: 10px;
   border: none;
   font-size: 16px;
   outline: none;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
-/* LISTA */
+/* LISTA CENTRAL */
 .lista {
   background: rgba(255, 255, 255, 0.08);
   padding: 20px;
   border-radius: 15px;
-  width: 720px;
+  width: 520px;
 }
 
 .lista h3 {
@@ -117,14 +118,15 @@ body {
   background: rgba(255,255,255,0.08);
   padding: 20px;
   border-radius: 15px;
-  width: 720px;
-  margin-top: 15px;
+  width: 520px;
+  margin-top: 16px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* BOTONES */
 .botones button {
   padding: 10px 18px;
   border: none;
@@ -134,11 +136,17 @@ body {
 }
 
 .botones button:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .descargar {
   background: #00ff99;
   color: black;
   font-weight: bold;
+}
+
+/* EFECTO FLOTANTE */
+.lista,
+.descargas {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
