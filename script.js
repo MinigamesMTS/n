@@ -5,7 +5,7 @@ const textoJuego = document.getElementById("juego");
 
 let modoActual = "juegos";
 
-/* BUSCADOR */
+/* BUSCADOR (NO BORRA JUEGOS, SOLO OCULTA) */
 buscador.addEventListener("keyup", () => {
   const texto = buscador.value.toLowerCase();
   const items = lista.getElementsByTagName("li");
@@ -21,25 +21,13 @@ function seleccionar(nombre) {
   textoJuego.textContent = nombre;
 }
 
-/* MENÚ */
+/* MENÚ (NO ELIMINA JUEGOS) */
 function mostrarJuegos() {
   modoActual = "juegos";
   titulo.textContent = "☰ Juegos optimizados";
-  buscador.value = "";
-  mostrarTodo();
 }
 
 function mostrarProgramas() {
   modoActual = "programas";
-  titulo.textContent = "🧩 Programas";
-  buscador.value = "";
-  mostrarTodo();
-}
-
-/* MOSTRAR TODOS LOS ÍTEMS */
-function mostrarTodo() {
-  const items = lista.getElementsByTagName("li");
-  for (let item of items) {
-    item.style.display = "flex";
-  }
+  titulo.textContent = "☰ Programas";
 }
