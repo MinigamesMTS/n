@@ -1,54 +1,43 @@
 * {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
-  background: #0d0f14;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
   color: #fff;
 }
 
-/* BARRA SUPERIOR */
+/* TOPBAR */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
-  background: #151823;
-  border-bottom: 2px solid #1f2333;
-}
-
-.topbar h1 {
-  margin: 0;
-  font-size: 22px;
+  padding: 15px;
+  background: #020617;
+  border-bottom: 1px solid #1e293b;
 }
 
 .topbar input {
-  width: 250px;
   padding: 8px;
-  border-radius: 5px;
+  width: 250px;
+  border-radius: 6px;
   border: none;
-  outline: none;
 }
 
 /* CONTENEDOR */
 .contenedor {
   display: flex;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 60px);
 }
 
 /* SIDEBAR */
 .sidebar {
-  width: 260px;
-  background: #11131b;
+  width: 220px;
+  background: #020617;
   padding: 15px;
-  border-right: 2px solid #1f2333;
-  overflow-y: auto;
-}
-
-.sidebar h3 {
-  margin-top: 0;
+  border-right: 1px solid #1e293b;
 }
 
 .sidebar ul {
@@ -57,44 +46,62 @@ body {
 }
 
 .sidebar li {
-  padding: 10px;
-  margin-bottom: 6px;
-  background: #1a1d2b;
-  border-radius: 5px;
+  padding: 8px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .sidebar li:hover {
-  background: #2a2e44;
+  background: #1e293b;
 }
 
-/* CONTENIDO */
-.contenido {
+/* JUEGOS */
+.juegos {
   flex: 1;
-  padding: 20px;
-}
-
-.info {
-  margin-top: 15px;
-  background: #151823;
   padding: 15px;
-  border-radius: 6px;
+  overflow-y: auto;
 }
 
-/* BOTONES */
-.acciones {
-  margin-top: 20px;
+#lista-juegos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
 }
 
-.acciones button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
+.juego {
+  background: #020617;
+  padding: 10px;
+  border-radius: 8px;
   cursor: pointer;
-  margin-right: 10px;
+  border: 1px solid #1e293b;
 }
 
-.acciones .descargar {
-  background: #00c853;
-  color: #000;
+.juego:hover {
+  background: #1e293b;
+}
+
+.juego span {
+  font-size: 12px;
+  color: #38bdf8;
+}
+
+/* INFO */
+.info {
+  width: 260px;
+  background: #020617;
+  padding: 15px;
+  border-left: 1px solid #1e293b;
+}
+
+.info button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.info .descargar {
+  background: #22c55e;
 }
