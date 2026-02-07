@@ -72,6 +72,9 @@ body {
   background: rgba(255,255,255,0.08);
   padding: 20px;
   border-radius: 15px;
+
+  max-width: 900px;   /* 👈 controla el ancho */
+  width: 100%;
 }
 
 .lista h3 {
@@ -134,4 +137,5 @@ body {
   color: black;
   font-weight: bold;
 }
+
 
