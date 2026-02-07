@@ -7,34 +7,41 @@
 </head>
 <body>
 
-<div class="panel">
+<div class="app">
 
-  <!-- Buscador -->
-  <input type="text" class="buscador" placeholder="Buscar...">
+  <!-- MENÚ IZQUIERDO -->
+  <aside class="menu">
+    <h2>Menú</h2>
+    <button onclick="mostrarJuegos()">🎮 Juegos</button>
+    <button onclick="mostrarProgramas()">🧩 Programas</button>
+  </aside>
 
-  <!-- Lista -->
-  <div class="lista">
-    <h3>☰ GamesCrack</h3>
-    <ul>
-      <li onclick="seleccionar('Kenshi')">Kenshi <span class="tag">64 BITS</span></li>
-      <li onclick="seleccionar('Kung Fu Master')">Kung Fu Master</li>
-      <li onclick="seleccionar('L.A Noire')">L.A Noire</li>
-      <li onclick="seleccionar('Land of The Dead')">Land of The Dead <span class="tag">LAN</span></li>
-      <li onclick="seleccionar('Left 4 Dead')">Left 4 Dead <span class="tag">LAN</span></li>
-      <li onclick="seleccionar('Left 4 Dead 2')">Left 4 Dead 2 <span class="tag">LAN</span></li>
-      <li onclick="seleccionar('Lethal Company')">Lethal Company</li>
-      <li onclick="seleccionar('Life is Strange')">Life is Strange</li>
-      <li onclick="seleccionar('Little Nightmares')">Little Nightmares</li>
-    </ul>
-  </div>
+  <!-- PANEL PRINCIPAL -->
+  <div class="panel">
 
-  <!-- Barra inferior -->
-  <div class="descargas">
-    <span id="juego">Selecciona un juego</span>
-    <div class="botones">
-      <button>Tutorial</button>
-      <button class="descargar">Descargar</button>
+    <input type="text" class="buscador" placeholder="Buscar...">
+
+    <div class="lista">
+      <h3 id="titulo">☰ GamesCrack</h3>
+
+      <ul id="lista">
+        <!-- Juegos por defecto -->
+        <li onclick="seleccionar('Kenshi')">Kenshi <span class="tag">64 BITS</span></li>
+        <li onclick="seleccionar('Left 4 Dead')">Left 4 Dead <span class="tag">LAN</span></li>
+        <li onclick="seleccionar('Left 4 Dead 2')">Left 4 Dead 2 <span class="tag">LAN</span></li>
+        <li onclick="seleccionar('Lethal Company')">Lethal Company</li>
+        <li onclick="seleccionar('Little Nightmares')">Little Nightmares</li>
+      </ul>
     </div>
+
+    <div class="descargas">
+      <span id="juego">Selecciona un juego</span>
+      <div class="botones">
+        <button>Tutorial</button>
+        <button class="descargar">Descargar</button>
+      </div>
+    </div>
+
   </div>
 
 </div>
