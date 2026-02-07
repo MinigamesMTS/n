@@ -1,5 +1,45 @@
 const lista = document.getElementById("lista");
 const titulo = document.getElementById("titulo");
+const buscador = document.querySelector(".buscador");
+
+let datosActuales = [];
+
+/* -------- DATOS -------- */
+const juegos = [
+  { nombre: "Kenshi", tag: "64 BITS" },
+  { nombre: "Left 4 Dead", tag: "LAN" },
+  { nombre: "Left 4 Dead 2", tag: "LAN" },
+  { nombre: "Lethal Company", tag: "" },
+  { nombre: "Little Nightmares", tag: "" }
+];
+
+const programas = [
+  { nombre: "WinRAR" },
+  { nombre: "7-Zip" },
+  { nombre: "OBS Studio" },
+  { nombre: "VLC Media Player" }
+];
+
+/* -------- FUNCIONES -------- */
+function renderLista(datos) {
+  lista.innerHTML = "";
+
+  if (datos.length === 0) {
+    lista.innerHTML = "<li>No se encontraron resultados</li>";
+    return;
+  }
+
+  datos.forEach(item => {
+    const li = document.createElement("li");
+    li.onclick = () => seleccionar(item.nombre);
+
+    li.innerHTML = item.tag
+      ? `${item.nombre} <span class="tag">${item.tag}</span>`
+      : item.nombre;
+
+    lista.appendChild(li);
+  });
+}
 
 function seleccionar(nombre) {
   document.getElementById("juego").textContent = nombre;
@@ -7,21 +47,29 @@ function seleccionar(nombre) {
 
 function mostrarJuegos() {
   titulo.textContent = "☰ Juegos optimizados";
-  lista.innerHTML = `
-    <li onclick="seleccionar('Kenshi')">Kenshi <span class="tag">64 BITS</span></li>
-    <li onclick="seleccionar('Left 4 Dead')">Left 4 Dead <span class="tag">LAN</span></li>
-    <li onclick="seleccionar('Left 4 Dead 2')">Left 4 Dead 2 <span class="tag">LAN</span></li>
-    <li onclick="seleccionar('Lethal Company')">Lethal Company</li>
-    <li onclick="seleccionar('Little Nightmares')">Little Nightmares</li>
-  `;
+  datosActuales = juegos;
+  buscador.value = "";
+  renderLista(juegos);
 }
 
 function mostrarProgramas() {
   titulo.textContent = "☰ Programas";
-  lista.innerHTML = `
-    <li onclick="seleccionar('WinRAR')">WinRAR</li>
-    <li onclick="seleccionar('7-Zip')">7-Zip</li>
-    <li onclick="seleccionar('OBS Studio')">OBS Studio</li>
-    <li onclick="seleccionar('VLC Media Player')">VLC Media Player</li>
-  `;
+  datosActuales = programas;
+  buscador.value = "";
+  renderLista(programas);
 }
+
+/* -------- BUSCADOR -------- */
+buscador.addEventListener("input", () => {
+  const texto = buscador.value.toLowerCase();
+
+  const filtrados = datosActuales.filter(item =>
+    item.nombre.toLowerCase().includes(texto)
+  );
+
+  renderLista(filtrados);
+});
+
+/* -------- CARGA INICIAL -------- */
+mostrarJuegos();
+
