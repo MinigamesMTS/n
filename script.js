@@ -64,25 +64,25 @@ function cerrarModal() {
 /* ========================= */
 function irLink(servidor) {
   const links = {
-    "Kenshi": {
-      mega: "https://mega.nz/tu-link",
-      mediafire: "https://mediafire.com/tu-link"
+    "Cuphead": {
+      mega: "https://mega.nz/file/U7AUjZTD#BucTTwPxVtzFWzHuhaBm053HpblGdetayqDyh5RNMxk",
+      mediafire: "https://www.mediafire.com/file/v2gtebbf5h9sbtq/Cuphead.rar/file"
     },
-    "Left 4 Dead": {
+    "Plantas VS Zombies": {
       mega: "https://mega.nz/tu-link",
       mediafire: "https://mediafire.com/tu-link"
     },
     "Undertale": {
-      mega: "https://mega.nz/tu-link",
-      mediafire: "https://mediafire.com/tu-link"
+      mega: "https://mega.nz/file/JV9kwBRD#S0IKY5vll220tSXg2Br8YQOeNCkafSTPQA_K2vdB2rM",
+      mediafire: "https://www.mediafire.com/file/t0knxsw5uebcvgc/Undertale.rar/file"
     },
-    "Little Nightmares": {
-      mega: "https://mega.nz/tu-link",
-      mediafire: "https://mediafire.com/tu-link"
+    "South Park: The Stick of Truth": {
+      mega: "https://mega.nz/file/0QsFyIiI#LwMkbnvhjGwhsq6V5dgsi1ieZ1Eig5qTDLVgiOCF8E8",
+      mediafire: "https://www.mediafire.com/file/wef2b7wbag9ucyn/South_Park_-_The_Stick_of_Truth.rar/file"
     },
     "Granny": {
-      mega: "https://mega.nz/tu-link",
-      mediafire: "https://mediafire.com/tu-link"
+      mega: "https://mega.nz/file/d7xl2aRB#ClwWMM7i2Evq3LU-DOQT3XbBndPToMKymmTdP4P18NY",
+      mediafire: "https://www.mediafire.com/file/3h8041wcif60dm2/Granny.rar/file"
     }
   };
 
@@ -94,4 +94,5 @@ function irLink(servidor) {
 
   cerrarModal();
 }
+
 
