@@ -16,7 +16,7 @@ buscador.addEventListener("keyup", () => {
   }
 });
 
-/* SELECCIONAR JUEGO */
+/* SELECCIONAR JUEGO / PROGRAMA */
 function seleccionar(nombre) {
   textoJuego.textContent = nombre;
 }
@@ -25,9 +25,21 @@ function seleccionar(nombre) {
 function mostrarJuegos() {
   modoActual = "juegos";
   titulo.textContent = "☰ Juegos optimizados";
+  buscador.value = "";
+  mostrarTodo();
 }
 
 function mostrarProgramas() {
   modoActual = "programas";
-  titulo.textContent = "☰ Programas";
+  titulo.textContent = "🧩 Programas";
+  buscador.value = "";
+  mostrarTodo();
+}
+
+/* MOSTRAR TODO AL CAMBIAR DE SECCIÓN */
+function mostrarTodo() {
+  const items = lista.getElementsByTagName("li");
+  for (let item of items) {
+    item.style.display = "flex";
+  }
 }
