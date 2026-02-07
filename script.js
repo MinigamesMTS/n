@@ -1,20 +1,34 @@
 const buscador = document.getElementById("buscador");
-const lista = document.getElementById("lista-juegos");
-const tituloJuego = document.getElementById("titulo-juego");
+const juegos = document.querySelectorAll(".juego");
+const titulo = document.getElementById("titulo-juego");
+const descripcion = document.getElementById("descripcion");
 
-/* BUSCADOR (NO BORRA NADA) */
+/* BUSCADOR */
 buscador.addEventListener("keyup", () => {
   const texto = buscador.value.toLowerCase();
-  const juegos = lista.getElementsByTagName("li");
 
-  for (let juego of juegos) {
-    juego.style.display = juego.textContent.toLowerCase().includes(texto)
-      ? "block"
-      : "none";
-  }
+  juegos.forEach(juego => {
+    const nombre = juego.textContent.toLowerCase();
+    juego.style.display = nombre.includes(texto) ? "block" : "none";
+  });
 });
 
-/* SELECCIONAR JUEGO */
-function seleccionarJuego(nombre) {
-  tituloJuego.textContent = nombre;
+/* FILTRO */
+function filtrar(categoria) {
+  juegos.forEach(juego => {
+    if (categoria === "todos") {
+      juego.style.display = "block";
+    } else {
+      const cats = juego.dataset.categoria;
+      juego.style.display = cats.includes(categoria) ? "block" : "none";
+    }
+  });
 }
+
+/* SELECCIÓN */
+function seleccionarJuego(nombre) {
+  titulo.textContent = nombre;
+  descripcion.textContent = "Información del juego " + nombre + ". Puedes editar esto en el script.";
+}
+
+
