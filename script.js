@@ -83,8 +83,12 @@ function irLink(servidor) {
     "Granny": {
       mega: "https://mega.nz/file/d7xl2aRB#ClwWMM7i2Evq3LU-DOQT3XbBndPToMKymmTdP4P18NY",
       mediafire: "https://www.mediafire.com/file/3h8041wcif60dm2/Granny.rar/file"
-    }
-  };
+    },
+     "Hello Neighbor": {
+      mega: "https://mega.nz/file/hzQw0YyT#jdPJ7mnXzaptbfdw7hQEgI-e7kB89rT-qUdPgk9t1OM",
+      mediafire: "https://www.mediafire.com/file/bsx17bax7jswsw0/Hello_Neighbor.rar/file"
+    },
+
 
   if (links[juegoSeleccionado]) {
     window.open(links[juegoSeleccionado][servidor], "_blank");
@@ -94,5 +98,6 @@ function irLink(servidor) {
 
   cerrarModal();
 }
+
 
 
