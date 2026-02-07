@@ -1,34 +1,46 @@
-const buscador = document.getElementById("buscador");
-const juegos = document.querySelectorAll(".juego");
-const titulo = document.getElementById("titulo-juego");
-const descripcion = document.getElementById("descripcion");
+const modal = document.getElementById("modal");
+const textoJuego = document.getElementById("juego");
 
-/* BUSCADOR */
-buscador.addEventListener("keyup", () => {
-  const texto = buscador.value.toLowerCase();
+let juegoSeleccionado = "";
 
-  juegos.forEach(juego => {
-    const nombre = juego.textContent.toLowerCase();
-    juego.style.display = nombre.includes(texto) ? "block" : "none";
-  });
-});
-
-/* FILTRO */
-function filtrar(categoria) {
-  juegos.forEach(juego => {
-    if (categoria === "todos") {
-      juego.style.display = "block";
-    } else {
-      const cats = juego.dataset.categoria;
-      juego.style.display = cats.includes(categoria) ? "block" : "none";
-    }
-  });
-}
-
-/* SELECCIÓN */
+/* SELECCIONAR JUEGO */
 function seleccionarJuego(nombre) {
-  titulo.textContent = nombre;
-  descripcion.textContent = "Información del juego " + nombre + ". Puedes editar esto en el script.";
+  juegoSeleccionado = nombre;
+  textoJuego.textContent = nombre;
 }
 
+/* ABRIR MODAL */
+function abrirModal() {
+  if (juegoSeleccionado === "") {
+    alert("Selecciona un juego primero");
+    return;
+  }
+  modal.classList.remove("oculto");
+}
 
+/* CERRAR MODAL */
+function cerrarModal() {
+  modal.classList.add("oculto");
+}
+
+/* LINKS */
+function irLink(servidor) {
+  const links = {
+    "Kenshi": {
+      mega: "https://mega.nz/tu-link",
+      mediafire: "https://mediafire.com/tu-link"
+    },
+    "Left 4 Dead": {
+      mega: "https://mega.nz/tu-link",
+      mediafire: "https://mediafire.com/tu-link"
+    }
+  };
+
+  if (links[juegoSeleccionado]) {
+    window.open(links[juegoSeleccionado][servidor], "_blank");
+  } else {
+    alert("No hay link para este juego");
+  }
+
+  cerrarModal();
+}
