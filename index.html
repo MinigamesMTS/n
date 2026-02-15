@@ -1,94 +1,45 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>GamesCracks</title>
-  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
 
-<header class="topbar">
-  <h1>GamesCracks</h1>
-  <input type="text" id="buscador" placeholder="Buscar juegos...">
-</header>
-
+<div class="app">
 <div class="contenedor">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <h3>Categorías</h3>
+  <!-- MENÚ IZQUIERDO -->
+  <aside class="menu">
+    <h2>Menú</h2>
+    <button onclick="mostrarJuegos()">🎮 Juegos</button>
+    <button onclick="mostrarProgramas()">🧩 Programas</button>
+  <aside class="panel menu">
+    <h3>☰ Menú</h3>
     <ul>
-      <li onclick="filtrar('todos')">📦 Todos</li>
-      <li onclick="filtrar('bajos')">💻 Bajos Recursos</li>
-      <li onclick="filtrar('bits')">🤖 64 Bits</li>
-      <li onclick="filtrar('lan')">🌐 LAN</li>
-      <li onclick="filtrar('offline')">🚫 Offline</li>
+      <li onclick="mostrarJuegos()">🎮 Juegos</li>
+      <li onclick="mostrarProgramas()">🧩 Programas</li>
     </ul>
   </aside>
 
-  <!-- LISTA DE JUEGOS -->
-  <main class="juegos">
-    <div id="lista-juegos">
+  <!-- PANEL PRINCIPAL -->
+  <div class="panel">
+  <main class="panel principal">
 
-      <div class="juego" data-categoria="bajos" onclick="seleccionarJuego('Cuphead')">
-        <h4>Cuphead</h4>
-        <span>Bajos Recursos</span>
+    <input type="text" class="buscador" placeholder="Buscar...">
+
+    <div class="lista">
+      <h3 id="titulo">☰ GamesCrack</h3>
+
+      <h3 id="titulo">☰ Juegos</h3>
+      <ul id="lista">
+        <!-- Juegos por defecto -->
+        <li onclick="seleccionar('Kenshi')">Kenshi <span class="tag">64 BITS</span></li>
+        <li onclick="seleccionar('Left 4 Dead')">Left 4 Dead <span class="tag">LAN</span></li>
+        <li onclick="seleccionar('Left 4 Dead 2')">Left 4 Dead 2 <span class="tag">LAN</span></li>
+@@ -42,7 +42,7 @@ <h3 id="titulo">☰ GamesCrack</h3>
       </div>
-
-      <div class="juego" data-categoria="offline" onclick="seleccionarJuego('Plantas VS Zombies')">
-        <h4>Plantas VS Zombies</h4>
-        <span>Offline</span>
-      </div>
-
-      <div class="juego" data-categoria="offline" onclick="seleccionarJuego('Undertale')">
-        <h4>Undertale</h4>
-        <span>Offline</span>
-      </div>
-
-      <div class="juego" data-categoria="bits" onclick="seleccionarJuego('Hello Neighbor')">
-        <h4>Hello Neighbor</h4>
-        <span>64 Bits</span>
-      </div>
-
-      <div class="juego" data-categoria="bajos" onclick="seleccionarJuego('South Park: The Stick of Truth')">
-        <h4South Park: The Stick of Truth</h4>
-        <span>Bajos Recursos</span>
-      </div>
-
-      <div class="juego" data-categoria="bajos" onclick="seleccionarJuego('Granny')">
-        <h4>Granny</h4>
-        <span>Bajos Recursos</span>
-      </div>
-
     </div>
+
+  </div>
   </main>
 
-  <!-- PANEL INFO -->
-  <aside class="info">
-    <h3 id="titulo-juego">Selecciona un juego</h3>
-    <p id="descripcion">Aquí aparecerá la información del juego.</p>
-
-    <button>📘 Tutorial</button>
-    <button class="descargar" onclick="abrirModal()>Descargar</button>
-  </aside>
-
 </div>
-
-<!-- MODAL -->
-<div id="modal" class="modal oculto">
-  <div class="modal-contenido">
-    <h3>Elegir servidor</h3>
-    <button class="mega" onclick="irLink('mega')">MEGA</button>
-    <button class="mediafire" onclick="irLink('mediafire')">MediaFire</button>
-    <button class="cerrar" onclick="cerrarModal()">Cancelar</button>
-  </div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
-
-
 
 
 
